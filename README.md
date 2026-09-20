@@ -214,6 +214,18 @@ Once a CSV is uploaded and the variables are selected, the boxplot is rendered w
 
 ---
 
+## 💼 Why This Matters
+
+Outlier detection is critical in fields like:
+
+- **Finance**: flagging fraudulent transactions.
+- **Manufacturing**: detecting defective batches.
+- **Healthcare**: identifying anomalous patient metrics.
+
+This app makes outlier exploration accessible to non-technical users.
+
+---
+
 ## 📬 Author
 
 **Ar Sullivan Santana Najera**
