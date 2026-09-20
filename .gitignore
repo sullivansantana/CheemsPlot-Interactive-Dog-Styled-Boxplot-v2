@@ -1,0 +1,16 @@
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Renderizados
+README.html
+*.html
+
+# rsconnect (credenciales)
+rsconnect/
+
+# Sistema
+.DS_Store
+Thumbs.db

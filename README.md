@@ -166,44 +166,6 @@ Pug,7.5
 Pug,22
 ```
 
-In this example, `breed` is the grouping variable and `weight` is the numeric variable.
-
----
-
-## 🚀 Deployment
-
-### → shinyapps.io
-
-From RStudio or Posit Cloud:
-
-```r
-install.packages("rsconnect")
-library(rsconnect)
-
-rsconnect::setAccountInfo(
-  name   = "TU-USUARIO",
-  token  = "TU-TOKEN",
-  secret = "TU-SECRET"
-)
-
-rsconnect::deployApp(
-  appDir      = "ruta/a/CheemsPlot-Interactive-Dog-Styled-Boxplot-Explorer",
-  appName     = "cheems-boxplot",
-  forceUpdate = TRUE
-)
-```
-
-`deployApp()` generates the `manifest.json` automatically and detects `ggdogs` as a GitHub dependency.
-
-### → Posit Connect Cloud (recommended long-term)
-
-1. Push the repository to GitHub.
-2. Sign in to [connect.posit.cloud](https://connect.posit.cloud).
-3. Connect your GitHub repo and select `app.R` as the entrypoint.
-4. Connect Cloud resolves dependencies from the code and manifest automatically.
-
-> ℹ️ Posit has announced that **shinyapps.io will be retired in 2027**. New projects are encouraged to deploy directly to Connect Cloud.
-
 ---
 
 ## ⚠️ Notes
@@ -231,6 +193,24 @@ This app demonstrates:
 - **Reactive programming** in R (`reactive()`, `observe()`, `downloadHandler()`)
 - Clean separation of UI, server logic, and reusable plotting functions
 - Reproducible deployment workflow: **local → GitHub → shinyapps.io / Connect Cloud**
+
+---
+
+## 📸 Outcome
+
+### 🖥️ Initial Dashboard View
+
+The app opens with a clean dashboard layout: a collapsible instructions panel at the top and an empty plot area ready to render once a CSV is uploaded.
+
+![Initial dashboard view](Images/01_InitialMenu.png)
+
+---
+
+### 🐶 Dashboard in Action
+
+Once a CSV is uploaded and the variables are selected, the boxplot is rendered with dog icons replacing the outliers. The dog style, size, orientation, and title can all be customized from the sidebar.
+
+![Dashboard rendering the dog-styled boxplot](Images/02_outcome.png)
 
 ---
 
